@@ -49,8 +49,5 @@ class NeuralNet():
             print(self.weights)
 
 
-
-
-
 if __name__ == "__main__":
     main()
