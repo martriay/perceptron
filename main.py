@@ -5,9 +5,16 @@ def main():
     print("Starting neural network")
     nn = NeuralNet()
 
+    training_set = [
+        [0, 0, 0],
+        [0, 1, 1],
+        [1, 0, 1],
+        [1, 1, 1]
+    ]
+
     print(f'How many epochs?')
     epochs = int(input())
-    nn.train(epochs)
+    nn.train(training_set, epochs)
 
     print(f'Model trained with {epochs} epochs, now test it!')
 
