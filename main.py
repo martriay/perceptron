@@ -2,7 +2,7 @@
 from NeuralNet import NeuralNet
 
 def main():
-    print("Starting neural network")
+    print("== Starting neural network")
     nn = NeuralNet()
 
     training_set = [
@@ -12,19 +12,21 @@ def main():
         [1, 1, 1]
     ]
 
-    print(f'How many epochs?')
+    print(f'> How many epochs?')
     epochs = int(input())
     nn.train(training_set, epochs)
 
-    print(f'Model trained with {epochs} epochs, now test it!')
+    print(f'== Model trained successfully')
 
     while(True):
-        print("Enter X value:")
+        print("-------------------------------------------------")
+        print("== Test:")
+        print("> Enter X value:")
         x = int(input())
-        print("Enter Y value:")
+        print("> Enter Y value:")
         y = int(input())
         result = nn.predict(x, y)
-        print(f'--- Result: {result}')
+        print(f'=> Result: {result}')
 
 
 if __name__ == "__main__":

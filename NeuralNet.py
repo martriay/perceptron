@@ -8,11 +8,11 @@ class NeuralNet():
         self.weights = [random.random(),random.random(),random.random()]
 
     def train(self, training_set=[], epochs = 50):
-        for _ in range(epochs):
+        for i in range(epochs):
             for item in training_set:
                 self.perceive(item[0], item[1], item[2])
 
-            print(self.weights)
+            print(f'Epoch {i}/{epochs}: {self.weights}')
 
     def predict(self, a, b):
         output = numpy.dot([a, b, self.bias], self.weights)
